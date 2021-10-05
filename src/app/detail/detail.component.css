@@ -1,0 +1,47 @@
+label,input{
+    display: block;
+}
+label {
+    color:orange;
+    font-weight: bold;
+  }
+  input {
+    font-size: 1em;
+    padding: .5rem;
+    width: 150%;
+  }
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+ 
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+ 
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+  .details{
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .food{
+    height: 50px;
+  }
+  h2{
+    text-align: center;
+    color:white;
+  }

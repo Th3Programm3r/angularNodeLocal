@@ -1,0 +1,33 @@
+<div  [ngStyle]="{'background-image': 'url('+ '/assets/images/details2.jpg' +')', 
+'height':'1000px',
+'margin':'0px',
+'background-size': '100%', 
+'background-repeat': 'no-repeat',
+'background-position':'center'
+}">
+    <div class='details' *ngIf="currentUser">
+        <h2>User {{currentUser.username}} Details:</h2>
+        <div>
+            <label for="firstName">Firstname: </label>
+            <input [(ngModel)]="currentUser.firstName" placeholder="Introduce your firstname"/>
+            <label for="lastName">LastName: </label>
+            <input [(ngModel)]="currentUser.lastName" placeholder="Introduce your lastname"/>
+            <label for="password">Password: </label>
+            <input [(ngModel)]="currentUser.password" placeholder="Introduce your password"/>
+            <label for="age">Age: </label>
+            <input [(ngModel)]="currentUser.age" placeholder="Introduce your age"/>
+            <label for="height">Height: </label>
+            <input [(ngModel)]="currentUser.height" placeholder="Introduce your height"/>
+            <label for="weight">Weight: </label>
+            <input [(ngModel)]="currentUser.weight" placeholder="Introduce your weight"/>
+            <label for="breakfast">Breakfast: </label>
+            <input class="food" [(ngModel)]="currentUser.breakfast" placeholder="Introduce what u usualy eat for breakfast"/>
+            <label for="lunch">Lunch: </label>
+            <input class="food" [(ngModel)]="currentUser.lunch" placeholder="Introduce what u usualy eat for lunch"/>
+            <label for="dinner">Dinner: </label>
+            <input class="food" [(ngModel)]="currentUser.dinner" placeholder="Introduce what u usualy eat for dinner"/>
+        </div>
+        <button (click)="goBack()">Go back</button>
+        <button (click)="save()">Save</button>
+    </div>
+</div>

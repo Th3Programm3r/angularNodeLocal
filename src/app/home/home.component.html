@@ -1,0 +1,36 @@
+<div  [ngStyle]="{'background-image': 'url('+ '/assets/images/background.jpg' +')', 
+'height':'1000px',
+'margin':'0px',
+'background-size': '100%', 
+'background-repeat': 'no-repeat',
+'background-position':'center'
+}">
+    <div class="allUsers" *ngIf="check;else view2">
+        <ul class="users">
+            <h3>All registered users:</h3>
+            <h3>Click on the name to edit</h3>
+            <li *ngFor="let user of users"> 
+                <a routerLink="/detail/{{user.username}}">
+                    <span class="badge">{{user.firstName}}</span>{{user.lastName}}
+                </a>
+                <div *ngIf="user.username!=='admin'">
+                    <button class="delete" title="delete hero"(click)="deleteUser(user.id)">x</button>
+                </div>
+            </li> 
+        </ul>
+    </div>   
+
+
+    <ng-template #view2>
+        <div class='allUsers'>  
+            <h3>Click on the name to edit</h3> 
+            <ul class="users">
+                <li>
+                    <a routerLink="/detail/{{currentUser.username}}">
+                        <span class="badge">{{currentUser.firstName}} </span>{{currentUser.lastName}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </ng-template>  
+</div>

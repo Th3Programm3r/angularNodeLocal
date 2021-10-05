@@ -1,0 +1,63 @@
+h2,input,label,button,nav{
+    display: block;
+}
+h2{
+  text-align: center;
+  color: white;
+}
+.form-group {
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  label{
+    color:orange;
+    font-weight: bold;
+  }
+  nav a {
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 85%;
+    border: none;
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+    background-color: #04AA6D;
+    color:white;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    color: white;
+    background-color: #42545C;
+  }
+  nav a.active {
+    background-color: black;
+  }
